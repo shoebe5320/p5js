@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script>
+     //variables for the cirlcls//
+var circleX
+var circleY
+function setup() {
+  createCanvas(400, 400);
+ background(200)
+}
+
+function draw() {
+    
+}
+// action happen when you press the key. any key on the key board//
+function keyPressed(){
+    //fill in random colors for the cirlces and the rectangles.//
+    //while usung mouseX and mouse Y.//
+    //meaning while you move the mouse things will  happen//
+	fill(random(255),random(255),random(255))
+    //Circles will form if you move the mouse//
+	ellipse(mouseX,mouseY,random(6,100))
+}
+//something will happen when you dragg the mouse// 
+//everytime you gragg the mouse and click the mouse or key board it will make sometyhing in the screen//
+
+    function mouseDragged(){
+       strokeWeight(5)
+        //codes for the lines that will be dran in the screen if you dragg your mouse//
+        
+        //top left//
+ 
+        line(mouseX,mouseY,0,0)
+        //bottom left//
+        line(mouseX,mouseY,400,0)
+        //top right//
+        line(mouseX,mouseY,0,400)
+        //botton right//
+        line(mouseX,mouseY,400,400)
+
+}
+//when you press there will be random color rectacles will be drawn//
+function mousePressed(){
+    fill(random(255),random(255),random(255))
+    strokeWeight(10)
+    
+    //using mosuse X and Y.//
+    rect(mouseX,mouseY,100,100)
+    
+    
+    
+    
+    
+}
+
+   
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/shoebe5320/p5js/blob/master/project2nd.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
